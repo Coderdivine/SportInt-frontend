@@ -1,71 +1,67 @@
-# Getting Started with Create React App
+# SportInterest Frontend Documentation
+This documentation provides an overview of the frontend code structure and routing configuration for the SportInterest application.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Folder Structure
+The frontend code is organized in the following folder structure:
 
-## Available Scripts
+```txt
+/src
+  |- App.css
+  |- App.js
+  |- logo.svg
+  |- Pages
+      |- HomePage.js
+      |- ProfilePage.js
+      |- LoginPage.js
+      |- VerificationPage.js
+      |- RegisterPage.js
+App.css: This file contains the CSS styles specific to the App component.
+App.js: This file is the entry point of the application and contains the main App component.
+logo.svg: This file represents the logo of the application.
+Pages: This folder contains individual page components representing different routes in the application.
+Routing Configuration
+The routing in the SportInterest application is handled using the react-router-dom library. The routing configuration is as follows:
+```
 
-In the project directory, you can run:
+```js
+Copy code
+import { Routes, Route, Link } from 'react-router-dom';
+import HomePage from './Pages/HomePage';
+import ProfilePage from './Pages/ProfilePage';
+import LoginPage from './Pages/LoginPage';
+import VerificationPage from './Pages/VerificationPage';
+import RegisterPage from './Pages/RegisterPage';
 
-### `npm start`
+function App() {
+  return (
+    <div>
+      <Routes>
+        <Route exact path='/' element={<HomePage />} />
+        <Route path='/profile' element={<ProfilePage />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/register' element={<RegisterPage />} />
+        <Route path='/verify-email' element={<VerificationPage />} />
+        <Route />
+      </Routes>
+    </div>
+  );
+}
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+export default App;
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The Routes component is used to define the routing configuration.
+Each Route component specifies a path and its corresponding component to render.
+The element prop is used to define the component to render for a specific route.
+The exact prop is used for the root route (/) to ensure it matches only the exact path.
+Pages
+The application consists of several page components representing different routes. Here are the page components available in the SportInterest application:
 
-### `npm test`
+HomePage: This component represents the home page of the application.
+ProfilePage: This component represents the profile page of the user.
+LoginPage: This component represents the login page.
+VerificationPage: This component represents the email verification page.
+RegisterPage: This component represents the registration page.
+Each page component is responsible for rendering the respective content for its corresponding route.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# SportInt-frontend
+This documentation provides an overview of the frontend code structure and routing configuration for the SportInterest application. For detailed information about the functionality and implementation of each component, please refer to the component files or consult the frontend developers.
