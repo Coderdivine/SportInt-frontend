@@ -1,5 +1,5 @@
 # SportInterest Frontend Documentation
-This documentation provides an overview of the frontend code structure and routing configuration for the SportInterest application.
+This documentation provides an overview of the frontend code structure and routing configuration for the SportInterest application
 
 Folder Structure
 The frontend code is organized in the following folder structure:
